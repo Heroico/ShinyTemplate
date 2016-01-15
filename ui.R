@@ -11,7 +11,7 @@ shinyUI(fluidPage(
     titlePanel("[Write your title here]"),
 
     p("'Tissue' stands for different transcriptome models used when generating the association."),
-
+    p("[Example data built with IGROWTH pheotype GWAS]."),
     # Create a new Row in the UI for selectInputs
     fluidRow(
       column(3,

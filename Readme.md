@@ -45,14 +45,14 @@ It will read them and overwrite `allresultsn.db`
 
 ## Run
 
-Assuming you installed `shiny` R package, you only need to run `runapp()` at an R console started at the project folder.
+Assuming you installed `shiny` R package, you only need to run `runApp()` at an R console started at the project folder.
 
 ## deploy
 
 You need to have `rsconnect`R Package installed. You need to configure your acount info by running:
 
 ```R
-shinyapps::setAccountInfo(name='myaccount', token='MY_TOKEN', secret='MY_SECRET')
+rsconnect::setAccountInfo(name='myaccount', token='MY_TOKEN', secret='MY_SECRET')
 ```
 
 Then, from an R console started at the project, run `deployApp(appName="My App or Whatever")`
