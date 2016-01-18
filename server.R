@@ -18,7 +18,7 @@ shinyServer(function(input, output) {
     }
     where <- paste0(where, " AND pval < ", t)
 
-    query <- paste0("SELECT gene_name, zscore, pval, tissue, pred_perf_R2, n, model_n, gene FROM results ", where);
+    query <- paste0("SELECT gene_name, zscore, pval, pheno, tissue, pred_perf_R2, n, model_n, gene FROM results ", where);
     query <- paste0(query, " ORDER BY pval");
     l = 100
     if (input$limit > 1) {
