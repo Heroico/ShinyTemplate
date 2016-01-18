@@ -12,6 +12,9 @@ shinyServer(function(input, output) {
     if (input$tissue != "All") {
       where <- paste0(where, " AND tissue = '", input$tissue, "'")
     }
+    if (input$pheno != "All") {
+      where <- paste0(where, " AND pheno = '", input$pheno, "'")
+    }
     t = 0.05
     if (input$threshold > 0) {
       t = input$threshold
