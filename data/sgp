@@ -2,7 +2,6 @@ All
 AMD_Advanced
 AMD_GeographicAtropy
 AMD_Neovascular
-Diagram
 EGG
 GEFOS2_FNBMD_POOLED
 GEFOS2_LSBMD_POOLED
@@ -21,6 +20,17 @@ MAGIC_ln_FastingInsulin
 MAGIC_ln_fastingProinsulin
 MAGIC_ln_HOMA-B
 MAGIC_ln_HOMA-IR
+MAGIC_Manning_et_al_FastingGlucose_Interaction
+MAGIC_Manning_et_al_FastingGlucose_MainEffect
+MAGIC_Manning_et_al_lnFastingInsulin_Interaction
+MAGIC_Manning_et_al_lnFastingInsulin_MainEffect
+PGC_ADHD
+pgc.bip.clump.2012-04
+pgc.bip.full.2012-04
+PGC_tag.cpd.tbl
+PGC_tag.evrsmk.tbl
+PGC_tag.former.tbl
+PGC_tag.logonset.tbl
 RA_GWASmeta_Asian_v2
 RA_GWASmeta_European_v2
 RA_GWASmeta_TransEthnic_v2

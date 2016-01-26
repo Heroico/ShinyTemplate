@@ -9,10 +9,10 @@ sgp <- scan("data/sgp", what=character())
 
 shinyUI(fluidPage(
   fluidPage(
-    titlePanel("[Write your title here]"),
+    titlePanel("Metaxcan Association results"),
 
     p("'Tissue' stands for different transcriptome models used when generating the association."),
-    p("[Example data built with IGROWTH pheotype GWAS]."),
+    p("Tissues built with GTEX data, covariances with 1000 Genomes."),
     # Create a new Row in the UI for selectInputs
     fluidRow(
       column(3,
