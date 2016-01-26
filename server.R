@@ -24,7 +24,9 @@ shinyServer(function(input, output) {
     where <- paste0(where, " AND pval < ", t)
 
     query <- paste0("SELECT gene_name, zscore, pval, pheno, tissue, pred_perf_R2, n, model_n, gene FROM metaxcanresults ", where);
-    query <- paste0(query, " ORDER BY pval");
+    if (input$ordered){
+        query <- paste0(query, " ORDER BY pval");
+    }
     l = 100
     if (input$limit > 1) {
       l = input$limit
@@ -34,8 +36,8 @@ shinyServer(function(input, output) {
 
     #Modify the following line to point to a different data set, if you want. Or just replace the db file with an appropriate one.
     drv <- dbDriver("PostgreSQL")
-    db <- dbConnect(drv, host='p', port='5432', dbname='metaxcan',
-                 user='p', password='p')
+    db <- dbConnect(drv, host='', port='', dbname='',
+                 user='', password='')
     data <- dbGetQuery(db, query)
     dbDisconnect(db)
 

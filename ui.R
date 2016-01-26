@@ -20,6 +20,9 @@ shinyUI(fluidPage(
                       "Gene Name:",
                       "")
       ),
+      column(1,
+        checkboxInput("ordered", label = "Ordered", value = TRUE)
+      ),
       column(2,
           selectInput("pheno",
                       "Phenotype:",
