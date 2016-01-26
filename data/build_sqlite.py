@@ -98,6 +98,7 @@ for content in contents:
 
             comps = line.strip().split(",")
             if comps[RTF.ZSCORE] == "NA": continue
+            if "inf" in comps[RTF.ZSCORE]: continue
 
             gene = comps[RTF.GENE]
             gene_name = comps[RTF.GENE_NAME]
