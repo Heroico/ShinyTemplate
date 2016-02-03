@@ -1,11 +1,9 @@
-#library(RSQLite)
-#Modify the following line to point to a different data set, if you want. Or just replace the db file with an appropriate one.
-#db <- dbConnect(SQLite(), "data/allresultsn.db")
-#data <- dbGetQuery(db, "SELECT DISTINCT tissue from results;")
-#dbDisconnect(db)
+source("helpers.R")
 
+#reset Shiny Server when data gets updated
 sgt <- scan("data/sgt", what=character())
 sgp <- scan("data/sgp", what=character())
+
 
 shinyUI(fluidPage(
   fluidPage(

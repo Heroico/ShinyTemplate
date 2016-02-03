@@ -1,3 +1,4 @@
+
 sgt <- c("All",
 "TW_Brain-Cortex_elastic_net_0_5",
 "TW_Esophagus-Mucosa_elastic_net_0_5",
@@ -42,7 +43,6 @@ sgt <- c("All",
 "TW_Artery-Tibial_elastic_net_0_5")
 sgt <- sort(as.character(sgt))
 write(sgt, file="sgt")
-
 
 sgp <- c( "All",
 "GIANT_BMI_EUR",
