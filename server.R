@@ -21,11 +21,15 @@ shinyServer(function(input, output) {
       where <- paste0(where, " AND p.tag = '", input$pheno, "'")
     }
     t = 0.05
-    if (input$threshold > 0) {
+    if (is.numeric(input$threshold) && input$threshold > 0) {
       t = input$threshold
     }
     where <- paste0(where, " AND pval < ", t)
-
+    r2_threshold = 0.1
+    if (is.numeric(input$r2_threshold) && input$r2_threshold > 0) {
+        r2_threshold = input$r2_threshold
+    }
+    where <- paste0(where, " AND pred_perf_R2 > ", r2_threshold)
     query <- paste0(
     "SELECT ",
     "m.gene_name,",

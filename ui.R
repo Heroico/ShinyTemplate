@@ -13,7 +13,7 @@ shinyUI(fluidPage(
     p("Tissues built with GTEX data, covariances with 1000 Genomes."),
     # Create a new Row in the UI for selectInputs
     fluidRow(
-      column(3,
+      column(2,
           textInput("gene_name",
                       "Gene Name:",
                       "")
@@ -31,12 +31,18 @@ shinyUI(fluidPage(
                       "Tissue:",
                       sgt)
       ),
-      column(2,
+      column(1,
+          numericInput("r2_threshold",
+                      "R2 threshold:",
+                      0.1)
+      ),
+
+      column(1,
           numericInput("threshold",
                       "Pvalue threshold:",
                       0.05)
       ),
-      column(2,
+      column(1,
           numericInput("limit",
                       "Record limit:",
                       100)
