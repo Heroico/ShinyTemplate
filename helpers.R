@@ -8,13 +8,13 @@ get_db <- function() {
 }
 
 get_tissue_tag <- function(db) {
-    tissue_tag <- dbGetQuery(db, "select distinct tag from tissue;")
+    tissue_tag <- dbGetQuery(db, "select distinct tag from tissue order by tag;")
     sgt <- c("All", tissue_tag$tag)
     return(sgt)
 }
 
 get_pheno_tag <- function(db) {
-    pheno_tag <- dbGetQuery(db, "select distinct tag from pheno;")
+    pheno_tag <- dbGetQuery(db, "select distinct tag from pheno order by tag;")
     sgp <- c("All", pheno_tag$tag)
     return(sgp)
 }
